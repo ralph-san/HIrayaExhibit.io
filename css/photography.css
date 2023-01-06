@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Raleway:wght@300;500;700&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: #F9DEC9;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #3A405A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #F9DEC9;
+    font-family: 'Playball', cursive;
+    letter-spacing: 10px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li a{
+    display: block;
+    color: #F9DEC9;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: .2s;
+    margin: 0 10px;
+}
+
+.nav-bar ul li a:hover{
+    color: #3A405A;
+    background: #F9DEC9;
+}
+
+.nav-bar ul li a.active{
+    color: #3A405A;
+    background: #F9DEC9;
+}
+
+/*content*/
+
+.whole{
+    margin-bottom: 150px;
+}
+
+.title h2{
+    font-size: 50px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    width: 90%;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    padding: 10px 10px;
+}
+
+.card7 img{
+    height: 245px;
+}
+
+.flip-card{
+    background-color: transparent;
+    height: 245px;
+    width: 420px;
+    perspective: 1000px;
+}
+
+.card5{
+    grid-row: 3 / span 2;
+}
+
+.card5 .flip-card{
+    height: 550px;
+}
+
+.text{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 7px;
+    text-align: center;
+    font-size: .8em;
+    padding: 5px 5px;
+}
+
+span{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+    border: 3px solid #000;
+    border-radius: 0;
+    box-shadow: 15px 15px 0 -2.5px #000, 15px 15px 0 0 #000;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front{
+    background: #F9DEC9;
+}
+  
+.flip-card-back{
+    background: #F9DEC9;
+    color: #000;
+    border: 3px solid #000;
+    transform: rotateY(180deg);
+    padding: 10px 10px;
+    text-align: justify;
+}
+
+footer{
+    background: #3A405A;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover{
+    color: #F9DEC9;
+}
+
+.footer-bottom{
+    background: #3A405A;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1320px){
+    
+    header{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    
+    header{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #F9DEC9;
+        margin: 6px 0;
+    }
+
+    .nav-bar{
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #3A405A;
+        transition: .5s;
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    .nav-bar.active{
+        height: 300px;
+    }
+
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: .5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+
+    .navbar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
+@media only screen and (max-width: 1015px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 465px){
+    .flip-card{
+        background-color: transparent;
+        height: 200px;
+        width: 350px;
+        perspective: 1000px;
+    }
+
+    img{
+        margin: auto;
+        width: 345px;
+    }    
+
+    .card5 .flip-card{
+        height: 455px;
+    }
+
+    .card7 .flip-card{
+        height: 240px;
+    }
+
+    .text{
+        font-size: 1em;
+        font-weight: 900;
+        text-align: center;
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 5px;
+    }
+
+    .flip-card-back p{
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .flip-card{
+        background-color: transparent;
+        height: 180px;
+        width: 320px;
+        perspective: 1000px;
+    }
+
+    img{
+        margin: auto;
+        width: 315px;
+    }    
+
+    .card5 .flip-card{
+        height: 420px;
+    }
+
+    .card7 .flip-card{
+        height: 240px;
+    }
+
+    .text{
+        font-size: .8em;
+        font-weight: 900;
+        text-align: center;
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 5px;
+    }
+
+    .flip-card-back p{
+        font-size: .7em;
+    }
+}
